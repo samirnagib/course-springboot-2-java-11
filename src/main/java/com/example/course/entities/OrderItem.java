@@ -50,8 +50,6 @@ public class OrderItem implements Serializable {
 	public void setProduct(Product product) {
 		id.setProduct(product);
 	}
-
-	
 	
 	public Integer getQuantity() {
 		return quantity;
@@ -67,6 +65,10 @@ public class OrderItem implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public Double getSubTotal() {
+		return price* quantity;
 	}
 
 	@Override
